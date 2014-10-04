@@ -3,10 +3,10 @@
 var rpp = require('random-polish-proverb');
 
 var getFirst = function(first) {
-  if (~first.indexOf(',') && ~~(Math.random()*3) > 0) {
-    return first.split(',')[0];
-  } else if (~first.indexOf(';')) {
-    return first.split(';')[0];
+  if (~first.indexOf(', ') && ~~(Math.random()*3) > 0) {
+    return first.split(', ')[0];
+  } else if (~first.indexOf('; ')) {
+    return first.split('; ')[0];
   } else {
     var splitted = first.split(' ');
     var wordsCount = Math.round(splitted.length/2) + (1-~~(Math.random()*3));
@@ -15,10 +15,10 @@ var getFirst = function(first) {
   }
 };
 var getLast = function(last) {
-  if (~last.indexOf(',') && ~~(Math.random()*3) > 0) {
-    return last.split(',').pop();
-  } else if (~last.indexOf(';')) {
-    return last.split(';').pop();
+  if (~last.indexOf(', ') && ~~(Math.random()*3) > 0) {
+    return last.split(', ').pop();
+  } else if (~last.indexOf('; ')) {
+    return last.split('; ').pop();
   } else {
     var splitted = last.split(' ');
     var wordsCount = Math.round(splitted.length/2) + (1-~~(Math.random()*3));
