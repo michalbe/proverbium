@@ -13,7 +13,7 @@
     "lint": "node node_modules/jshint/bin/jshint ."
   },
   "bin": {
-    "proverbium": "./cli.js"
+    "proverbium": "./bin/cli.js"
   },
   "dependencies": {
     "cli-color": "^0.3.2",
