@@ -32,11 +32,13 @@ var proverbium = function(cb) {
     rpp(function(pr2) {
       var first = getFirst(pr1);
       var last = getLast(pr2);
-      cb([pr1, pr2, first + ' ' + last]);
+      cb({
+        first: pr1,
+        second: pr2,
+        mix: first + ' ' + last
+      });
     });
   });
 };
 
-proverbium(function(result){
-  console.log(result);
-});
+module.exports = proverbium;
