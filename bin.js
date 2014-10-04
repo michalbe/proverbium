@@ -1,3 +1,3 @@
 'use strict';
 
-var proverbium = require('./');
+//var proverbium = require('./');
