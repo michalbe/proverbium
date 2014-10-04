@@ -11,5 +11,8 @@
   "scripts": {
     "test": "node tests/proverbium-tests.js",
     "lint": "node node_modules/jshint/bin/jshint ."
+  },
+  "dependencies": {
+    "random-polish-proverb": "^1.0.0"
   }
 }
