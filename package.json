@@ -1,6 +1,6 @@
 {
   "name": "proverbium",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
   "repository": "git@github.com:michalbe/proverbium.git",
   "devDependencies": {
@@ -9,7 +9,6 @@
     "precommit-hook": "^1.0.7"
   },
   "scripts": {
-    "install": "./install-me",
     "test": "node tests/proverbium-tests.js",
     "lint": "node node_modules/jshint/bin/jshint ."
   },
@@ -18,6 +17,6 @@
   },
   "dependencies": {
     "cli-color": "^0.3.2",
-    "random-polish-proverb": "^1.0.0"
+    "random-polish-proverb": "^1.0.1"
   }
 }

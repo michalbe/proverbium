@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo chmod 777 $(npm config get prefix)/lib/node_modules/proverbium/node_modules/random-polish-proverb/node_modules/polish-proverbs/
