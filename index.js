@@ -10,8 +10,19 @@ var getFirst = function(first) {
   } else {
     var splitted = first.split(' ');
     var wordsCount = Math.round(splitted.length/2);
-    // var words = splitted.slice(Math.max(splitted.length - wordsCount, 1));
     var words = splitted.slice(0, wordsCount);
+    return words.join(' ');
+  }
+};
+var getLast = function(last) {
+  if (~last.indexOf(',')) {
+    return last.split(',').pop();
+  } else if (~last.indexOf(';')) {
+    return last.split(';').pop();
+  } else {
+    var splitted = last.split(' ');
+    var wordsCount = Math.round(splitted.length/2);
+    var words = splitted.slice(Math.max(splitted.length - wordsCount, 1));
     return words.join(' ');
   }
 };
@@ -20,7 +31,8 @@ var proverbium = function(cb) {
   rpp(function(pr1){
     rpp(function(pr2) {
       var first = getFirst(pr1);
-      cb([pr1, pr2, first]);
+      var last = getLast(pr2);
+      cb([pr1, pr2, first + ' ' + last]);
     });
   });
 };
