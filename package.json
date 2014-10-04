@@ -13,6 +13,7 @@
     "lint": "node node_modules/jshint/bin/jshint ."
   },
   "dependencies": {
+    "cli-color": "^0.3.2",
     "random-polish-proverb": "^1.0.0"
   }
 }
