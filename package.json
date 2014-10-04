@@ -1,6 +1,6 @@
 {
   "name": "proverbium",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
   "repository": "git@github.com:michalbe/proverbium.git",
   "devDependencies": {
