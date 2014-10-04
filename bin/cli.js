@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-var proverbium = require('./');
+var proverbium = require('../');
 var clc = require('cli-color');
 
 proverbium(function(result) {
