@@ -4,7 +4,7 @@ Random, funny mix of Polish proverbs inspired by Słowa nad wyraz.
 ### How to use? ###
 Install with:
 ```bash
- $ npm sudo install proverbium -
+ $ npm sudo install proverbium -g
 ```
 and then...
 
