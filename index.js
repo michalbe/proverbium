@@ -28,14 +28,13 @@ var getLast = function(last) {
 };
 
 var proverbium = function(cb) {
-  rpp(function(pr1){
-    rpp(function(pr2) {
-      var first = getFirst(pr1);
-      var last = getLast(pr2);
+  rpp(function(a){
+    rpp(function(b) {
       cb({
-        first: pr1,
-        second: pr2,
-        mix: first + ' ' + last
+        first: a,
+        second: b,
+        mix1: getFirst(a) + ' ' + getLast(b),
+        mix2: getFirst(b) + ' ' + getLast(a)
       });
     });
   });
