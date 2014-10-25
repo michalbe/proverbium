@@ -15,4 +15,11 @@ and then...
 result:
 ![proverbium](https://raw.githubusercontent.com/michalbe/proverbium/master/example.png)
 
+You can also pass a path to a file with your own proverbs (each in a separate 
+line) to bypass _proverbium_'s default list:
+
+```bash
+ $ proverbium ~/my_proverbs.txt
+```
+
 Inspired by [Słowa nad wyraz](https://www.facebook.com/slowanadwyraz) by [stasm](https://github.com/stasm/).

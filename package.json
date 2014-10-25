@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "cli-color": "^0.3.2",
+    "minimist": "^1.1.0",
     "random-polish-proverb": "^1.0.1"
   }
 }
