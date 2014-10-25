@@ -1,6 +1,26 @@
 'use strict';
 
-var rpp = require('random-polish-proverb');
+var fs = require('fs');
+var path = require('path');
+
+var isNotBlank = function(line) {
+  return line !== '';
+};
+
+var getRandom = function(content) {
+   var lines = content.split('\n').filter(isNotBlank);
+   return lines[~~(Math.random() * lines.length)];
+};
+
+var getRandomProverbFromFile = function(file, cb) {
+  function next(err, data) {
+    if (err) {
+      throw err;
+    }
+    cb(getRandom(data));
+  }
+  fs.readFile(path.resolve(__dirname, file), {encoding: 'utf8'}, next);
+};
 
 var getFirst = function(first) {
   if (~first.indexOf(', ') && ~~(Math.random()*3) > 0) {
@@ -27,9 +47,13 @@ var getLast = function(last) {
   }
 };
 
-var proverbium = function(cb) {
-  rpp(function(a){
-    rpp(function(b) {
+var proverbium = function(cb, file) {
+  var getRandomProverb = file ?
+    getRandomProverbFromFile.bind(null, file) :
+    require('random-polish-proverb');
+
+  getRandomProverb(function(a){
+    getRandomProverb(function(b) {
       cb({
         first: a,
         second: b,
